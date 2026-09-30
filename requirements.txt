@@ -1,0 +1,7 @@
+numpy
+pandas
+pillow
+tqdm
+matplotlib
+torch>=2.3
+pytest

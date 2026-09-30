@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use blockadapt, please cite it as below."
+title: "blockadapt: online adaptation of vision-aided millimeter-wave blockage prediction from delayed received-power labels"
+abstract: >-
+  A vision-aided predictor of line-of-sight blockage on a millimeter-wave link loses accuracy at night and in
+  other recording sessions. blockadapt compares, as online streams on DeepSense 6G scenarios 17-21, six
+  label-free test-time adaptation methods (normalisation statistics, Tent, EATA, SAR, CoTTA, T3A) with
+  adaptation from delayed self-labels that the link derives from its own received power one prediction horizon
+  later: online fine-tuning and threshold re-calibration. It includes the power rule and its agreement with
+  the dataset labels, a shuffled-batch control that separates stream correlation from the shift, and the
+  tests that pin every reported number to the released result files.
+type: software
+authors:
+  - given-names: Samir
+    family-names: Hossain
+    orcid: "https://orcid.org/0009-0003-8986-0946"
+    affiliation: "Department of Electrical and Computer Engineering, Texas Tech University"
+version: 0.1.0
+license: MIT
+repository-code: "https://github.com/SamirHossain099/blockadapt"
+keywords:
+  - blockage prediction
+  - millimeter wave
+  - test-time adaptation
+  - online learning
+  - DeepSense 6G
+  - distribution shift
+  - computer vision

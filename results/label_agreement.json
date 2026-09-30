@@ -1,0 +1,836 @@
+[
+ {
+  "target": "scenario17:day",
+  "frames": 60000,
+  "valid": 59943,
+  "fps": [
+   12.05,
+   12.05
+  ],
+  "H": [
+   12
+  ],
+  "duration_min": 28.1,
+  "brightness": 101.1,
+  "block_rate": 0.0209,
+  "episodes": 312,
+  "episode_median_s": 0.25,
+  "pos_rate": 0.07413709690872997,
+  "frame": {
+   "agreement": 0.9995,
+   "precision": 0.9959481361426256,
+   "recall": 0.9800637958532695
+  },
+  "horizon": {
+   "agreement": 0.9993660644278731,
+   "precision": 0.9993200362647325,
+   "recall": 0.9921242124212422
+  },
+  "persistence": {
+   "auroc": 0.5737489468148963,
+   "ap": 0.27547543685911263,
+   "f1": 0.3392039450510743
+  },
+  "per_seq": {
+   "1": {
+    "frames": 20000,
+    "valid": 19981,
+    "fps": 12.05,
+    "H": 12,
+    "duration_min": 28.8,
+    "brightness": 108.9,
+    "block_rate": 0.02325,
+    "episodes": 113,
+    "episode_median_s": 0.25,
+    "pos_rate": 0.08172764125919624,
+    "frame": {
+     "agreement": 0.9995,
+     "precision": 0.989247311827957,
+     "recall": 0.989247311827957
+    },
+    "horizon": {
+     "agreement": 0.9996496671838246,
+     "precision": 0.9981617647058824,
+     "recall": 0.9975505205143906
+    },
+    "persistence": {
+     "auroc": 0.5714008651676888,
+     "ap": 0.27043010771725967,
+     "f1": 0.3479504289799809
+    }
+   },
+   "2": {
+    "frames": 20000,
+    "valid": 19981,
+    "fps": 12.05,
+    "H": 12,
+    "duration_min": 28.0,
+    "brightness": 92.0,
+    "block_rate": 0.02205,
+    "episodes": 107,
+    "episode_median_s": 0.33,
+    "pos_rate": 0.07657274410690156,
+    "frame": {
+     "agreement": 0.9993,
+     "precision": 1.0,
+     "recall": 0.9682539682539683
+    },
+    "horizon": {
+     "agreement": 0.9987988589159702,
+     "precision": 1.0,
+     "recall": 0.984313725490196
+    },
+    "persistence": {
+     "auroc": 0.5827617965691145,
+     "ap": 0.2748073894256192,
+     "f1": 0.342360756259581
+    }
+   },
+   "3": {
+    "frames": 20000,
+    "valid": 19981,
+    "fps": 12.05,
+    "H": 12,
+    "duration_min": 28.1,
+    "brightness": 102.3,
+    "block_rate": 0.0174,
+    "episodes": 92,
+    "episode_median_s": 0.25,
+    "pos_rate": 0.06411090536009209,
+    "frame": {
+     "agreement": 0.9997,
+     "precision": 1.0,
+     "recall": 0.9827586206896551
+    },
+    "horizon": {
+     "agreement": 0.9996496671838246,
+     "precision": 1.0,
+     "recall": 0.994535519125683
+    },
+    "persistence": {
+     "auroc": 0.6212344550338764,
+     "ap": 0.23183080705558576,
+     "f1": 0.32409118915588414
+    }
+   }
+  }
+ },
+ {
+  "target": "scenario17:night",
+  "frames": 10000,
+  "valid": 9981,
+  "fps": [
+   12.05,
+   12.05
+  ],
+  "H": [
+   12
+  ],
+  "duration_min": 14.1,
+  "brightness": 33.5,
+  "block_rate": 0.0195,
+  "episodes": 50,
+  "episode_median_s": 0.25,
+  "pos_rate": 0.06903115920248472,
+  "frame": {
+   "agreement": 0.9997,
+   "precision": 0.9848484848484849,
+   "recall": 1.0
+  },
+  "horizon": {
+   "agreement": 0.9996994289149383,
+   "precision": 0.9956647398843931,
+   "recall": 1.0
+  },
+  "persistence": {
+   "auroc": 0.6185169820067764,
+   "ap": 0.23983057432455498,
+   "f1": 0.32
+  },
+  "per_seq": {
+   "4": {
+    "frames": 10000,
+    "valid": 9981,
+    "fps": 12.05,
+    "H": 12,
+    "duration_min": 14.1,
+    "brightness": 33.5,
+    "block_rate": 0.0195,
+    "episodes": 50,
+    "episode_median_s": 0.25,
+    "pos_rate": 0.06903115920248472,
+    "frame": {
+     "agreement": 0.9997,
+     "precision": 0.9848484848484849,
+     "recall": 1.0
+    },
+    "horizon": {
+     "agreement": 0.9996994289149383,
+     "precision": 0.9956647398843931,
+     "recall": 1.0
+    },
+    "persistence": {
+     "auroc": 0.6185169820067764,
+     "ap": 0.23983057432455498,
+     "f1": 0.32
+    }
+   }
+  }
+ },
+ {
+  "target": "scenario18",
+  "frames": 120000,
+  "valid": 119886,
+  "fps": [
+   12.05,
+   12.05
+  ],
+  "H": [
+   12
+  ],
+  "duration_min": 28.4,
+  "brightness": 103.5,
+  "block_rate": 0.031683333333333334,
+  "episodes": 764,
+  "episode_median_s": 0.25,
+  "pos_rate": 0.09763441936506348,
+  "frame": {
+   "agreement": 0.9983,
+   "precision": 0.9939593629873695,
+   "recall": 0.9521304576538664
+  },
+  "horizon": {
+   "agreement": 0.9986487162804665,
+   "precision": 0.9979294280044863,
+   "recall": 0.988210166595472
+  },
+  "persistence": {
+   "auroc": 0.6367379995020843,
+   "ap": 0.32796813668985497,
+   "f1": 0.3853474123321601
+  },
+  "per_seq": {
+   "1": {
+    "frames": 20000,
+    "valid": 19981,
+    "fps": 12.05,
+    "H": 12,
+    "duration_min": 28.2,
+    "brightness": 115.2,
+    "block_rate": 0.0206,
+    "episodes": 105,
+    "episode_median_s": 0.25,
+    "pos_rate": 0.0757219358390471,
+    "frame": {
+     "agreement": 0.9994,
+     "precision": 0.9716981132075472,
+     "recall": 1.0
+    },
+    "horizon": {
+     "agreement": 0.999449477003153,
+     "precision": 0.9927821522309711,
+     "recall": 1.0
+    },
+    "persistence": {
+     "auroc": 0.6213118176868984,
+     "ap": 0.25282208564545533,
+     "f1": 0.32712215320910976
+    }
+   },
+   "2": {
+    "frames": 20000,
+    "valid": 19981,
+    "fps": 12.05,
+    "H": 12,
+    "duration_min": 28.5,
+    "brightness": 113.4,
+    "block_rate": 0.0291,
+    "episodes": 127,
+    "episode_median_s": 0.33,
+    "pos_rate": 0.09494019318352435,
+    "frame": {
+     "agreement": 0.99865,
+     "precision": 1.0,
+     "recall": 0.9536082474226805
+    },
+    "horizon": {
+     "agreement": 0.998348431009459,
+     "precision": 1.0,
+     "recall": 0.9826041117554033
+    },
+    "persistence": {
+     "auroc": 0.6021604269981462,
+     "ap": 0.3184643861109158,
+     "f1": 0.3694942903752039
+    }
+   },
+   "3": {
+    "frames": 20000,
+    "valid": 19981,
+    "fps": 12.05,
+    "H": 12,
+    "duration_min": 28.5,
+    "brightness": 112.2,
+    "block_rate": 0.0342,
+    "episodes": 166,
+    "episode_median_s": 0.25,
+    "pos_rate": 0.11756168359941944,
+    "frame": {
+     "agreement": 0.99955,
+     "precision": 0.9941434846266471,
+     "recall": 0.9926900584795322
+    },
+    "horizon": {
+     "agreement": 0.9995996196386567,
+     "precision": 0.9978732454274777,
+     "recall": 0.9987228607918263
+    },
+    "persistence": {
+     "auroc": 0.6564469937008373,
+     "ap": 0.30462996575103535,
+     "f1": 0.35686015831134565
+    }
+   },
+   "4": {
+    "frames": 20000,
+    "valid": 19981,
+    "fps": 12.05,
+    "H": 12,
+    "duration_min": 28.1,
+    "brightness": 101.1,
+    "block_rate": 0.0234,
+    "episodes": 109,
+    "episode_median_s": 0.25,
+    "pos_rate": 0.07897502627496121,
+    "frame": {
+     "agreement": 0.99985,
+     "precision": 0.9936305732484076,
+     "recall": 1.0
+    },
+    "horizon": {
+     "agreement": 0.9998498573644963,
+     "precision": 0.9981024667931688,
+     "recall": 1.0
+    },
+    "persistence": {
+     "auroc": 0.5925539293581039,
+     "ap": 0.29235790367017783,
+     "f1": 0.36505612493899464
+    }
+   },
+   "5": {
+    "frames": 20000,
+    "valid": 19981,
+    "fps": 12.05,
+    "H": 12,
+    "duration_min": 28.1,
+    "brightness": 95.1,
+    "block_rate": 0.0308,
+    "episodes": 147,
+    "episode_median_s": 0.33,
+    "pos_rate": 0.10885341074020319,
+    "frame": {
+     "agreement": 0.99975,
+     "precision": 0.9967479674796748,
+     "recall": 0.9951298701298701
+    },
+    "horizon": {
+     "agreement": 0.9996997147289926,
+     "precision": 0.9986206896551724,
+     "recall": 0.9986206896551724
+    },
+    "persistence": {
+     "auroc": 0.5690756957812232,
+     "ap": 0.3217354305408566,
+     "f1": 0.3426523297491039
+    }
+   },
+   "6": {
+    "frames": 20000,
+    "valid": 19981,
+    "fps": 12.05,
+    "H": 12,
+    "duration_min": 28.4,
+    "brightness": 84.0,
+    "block_rate": 0.052,
+    "episodes": 111,
+    "episode_median_s": 0.25,
+    "pos_rate": 0.10975426655322557,
+    "frame": {
+     "agreement": 0.9926,
+     "precision": 0.9988814317673378,
+     "recall": 0.8586538461538461
+    },
+    "horizon": {
+     "agreement": 0.9949451979380411,
+     "precision": 0.9990458015267175,
+     "recall": 0.9548563611491108
+    },
+    "persistence": {
+     "auroc": 0.7051680834135967,
+     "ap": 0.4430093483113775,
+     "f1": 0.514415289925494
+    }
+   }
+  }
+ },
+ {
+  "target": "scenario19",
+  "frames": 160000,
+  "valid": 159869,
+  "fps": [
+   7.04,
+   12.05
+  ],
+  "H": [
+   7,
+   8,
+   10,
+   12
+  ],
+  "duration_min": 49.0,
+  "brightness": 110.9,
+  "block_rate": 0.02888125,
+  "episodes": 1316,
+  "episode_median_s": 0.33,
+  "pos_rate": 0.09235686718500773,
+  "frame": {
+   "agreement": 0.9986,
+   "precision": 0.9904082087887576,
+   "recall": 0.9608309889634278
+  },
+  "horizon": {
+   "agreement": 0.9978857689733469,
+   "precision": 0.9969001859888407,
+   "recall": 0.9801557737893667
+  },
+  "persistence": {
+   "auroc": 0.5860049983837275,
+   "ap": 0.27213720043291273,
+   "f1": 0.3456661816670131
+  },
+  "per_seq": {
+   "1": {
+    "frames": 20000,
+    "valid": 19981,
+    "fps": 12.05,
+    "H": 12,
+    "duration_min": 28.0,
+    "brightness": 115.2,
+    "block_rate": 0.0296,
+    "episodes": 154,
+    "episode_median_s": 0.25,
+    "pos_rate": 0.10424903658475551,
+    "frame": {
+     "agreement": 0.99805,
+     "precision": 0.9381933438985737,
+     "recall": 1.0
+    },
+    "horizon": {
+     "agreement": 0.9979480506481158,
+     "precision": 0.9806967984934086,
+     "recall": 1.0
+    },
+    "persistence": {
+     "auroc": 0.6060480773135569,
+     "ap": 0.3185314765828012,
+     "f1": 0.3584070796460177
+    }
+   },
+   "2": {
+    "frames": 20000,
+    "valid": 19981,
+    "fps": 12.05,
+    "H": 12,
+    "duration_min": 28.0,
+    "brightness": 115.0,
+    "block_rate": 0.02845,
+    "episodes": 120,
+    "episode_median_s": 0.33,
+    "pos_rate": 0.08728291877283419,
+    "frame": {
+     "agreement": 0.9994,
+     "precision": 0.9929203539823008,
+     "recall": 0.9859402460456942
+    },
+    "horizon": {
+     "agreement": 0.9996496671838246,
+     "precision": 0.9977077363896848,
+     "recall": 0.9982798165137615
+    },
+    "persistence": {
+     "auroc": 0.6628747548209533,
+     "ap": 0.32038181335615984,
+     "f1": 0.40017323516673886
+    }
+   },
+   "3": {
+    "frames": 20000,
+    "valid": 19981,
+    "fps": 12.05,
+    "H": 12,
+    "duration_min": 28.7,
+    "brightness": 110.4,
+    "block_rate": 0.0396,
+    "episodes": 172,
+    "episode_median_s": 0.33,
+    "pos_rate": 0.12847204844602372,
+    "frame": {
+     "agreement": 0.9996,
+     "precision": 1.0,
+     "recall": 0.98989898989899
+    },
+    "horizon": {
+     "agreement": 0.9995996196386567,
+     "precision": 1.0,
+     "recall": 0.9968835216205687
+    },
+    "persistence": {
+     "auroc": 0.6025354763611205,
+     "ap": 0.35590538896869095,
+     "f1": 0.37600716204118173
+    }
+   },
+   "4": {
+    "frames": 20000,
+    "valid": 19983,
+    "fps": 10.0,
+    "H": 10,
+    "duration_min": 34.5,
+    "brightness": 104.3,
+    "block_rate": 0.0314,
+    "episodes": 155,
+    "episode_median_s": 0.3,
+    "pos_rate": 0.09873392383525997,
+    "frame": {
+     "agreement": 0.99915,
+     "precision": 1.0,
+     "recall": 0.9729299363057324
+    },
+    "horizon": {
+     "agreement": 0.9982985537707051,
+     "precision": 1.0,
+     "recall": 0.9827673593512417
+    },
+    "persistence": {
+     "auroc": 0.6600544609305018,
+     "ap": 0.28961284924636155,
+     "f1": 0.36764705882352944
+    }
+   },
+   "5": {
+    "frames": 20000,
+    "valid": 19985,
+    "fps": 8.0,
+    "H": 8,
+    "duration_min": 43.2,
+    "brightness": 114.8,
+    "block_rate": 0.02775,
+    "episodes": 180,
+    "episode_median_s": 0.31,
+    "pos_rate": 0.08831623717788341,
+    "frame": {
+     "agreement": 0.998,
+     "precision": 1.0,
+     "recall": 0.9279279279279279
+    },
+    "horizon": {
+     "agreement": 0.9965974480860645,
+     "precision": 1.0,
+     "recall": 0.9614730878186969
+    },
+    "persistence": {
+     "auroc": 0.5960043907793633,
+     "ap": 0.2443499185617363,
+     "f1": 0.315188762071993
+    }
+   },
+   "6": {
+    "frames": 20000,
+    "valid": 19986,
+    "fps": 7.04,
+    "H": 7,
+    "duration_min": 45.9,
+    "brightness": 113.4,
+    "block_rate": 0.0235,
+    "episodes": 179,
+    "episode_median_s": 0.28,
+    "pos_rate": 0.07580306214350045,
+    "frame": {
+     "agreement": 0.99805,
+     "precision": 1.0,
+     "recall": 0.9170212765957447
+    },
+    "horizon": {
+     "agreement": 0.99629740818573,
+     "precision": 1.0,
+     "recall": 0.9511551155115512
+    },
+    "persistence": {
+     "auroc": 0.6237724178459749,
+     "ap": 0.20159891929349857,
+     "f1": 0.28365878725590954
+    }
+   },
+   "7": {
+    "frames": 20000,
+    "valid": 19986,
+    "fps": 7.04,
+    "H": 7,
+    "duration_min": 47.6,
+    "brightness": 113.9,
+    "block_rate": 0.0286,
+    "episodes": 193,
+    "episode_median_s": 0.28,
+    "pos_rate": 0.0857600320224157,
+    "frame": {
+     "agreement": 0.9975,
+     "precision": 1.0,
+     "recall": 0.9125874125874126
+    },
+    "horizon": {
+     "agreement": 0.9970479335534874,
+     "precision": 1.0,
+     "recall": 0.9655775962660443
+    },
+    "persistence": {
+     "auroc": 0.6062058212270638,
+     "ap": 0.24329582577975042,
+     "f1": 0.3211091234347048
+    }
+   },
+   "8": {
+    "frames": 20000,
+    "valid": 19986,
+    "fps": 7.04,
+    "H": 7,
+    "duration_min": 49.0,
+    "brightness": 100.5,
+    "block_rate": 0.02215,
+    "episodes": 163,
+    "episode_median_s": 0.28,
+    "pos_rate": 0.07024917442209547,
+    "frame": {
+     "agreement": 0.99905,
+     "precision": 1.0,
+     "recall": 0.9571106094808126
+    },
+    "horizon": {
+     "agreement": 0.9976483538476933,
+     "precision": 1.0,
+     "recall": 0.9665242165242165
+    },
+    "persistence": {
+     "auroc": 0.5957652168366838,
+     "ap": 0.21823545463645114,
+     "f1": 0.3052516411378556
+    }
+   }
+  }
+ },
+ {
+  "target": "scenario20",
+  "frames": 64254,
+  "valid": 64202,
+  "fps": [
+   6.02,
+   6.02
+  ],
+  "H": [
+   6
+  ],
+  "duration_min": 59.1,
+  "brightness": 110.4,
+  "block_rate": 0.030052603728950727,
+  "episodes": 809,
+  "episode_median_s": 0.33,
+  "pos_rate": 0.09128999096601352,
+  "frame": {
+   "agreement": 0.9968717900831077,
+   "precision": 0.9445015416238438,
+   "recall": 0.9518384256861729
+  },
+  "horizon": {
+   "agreement": 0.995483006759914,
+   "precision": 0.9783616692426584,
+   "recall": 0.9720184268896093
+  },
+  "persistence": {
+   "auroc": 0.5779768688757598,
+   "ap": 0.22482819830851428,
+   "f1": 0.29237668161434976
+  },
+  "per_seq": {
+   "1": {
+    "frames": 20000,
+    "valid": 19987,
+    "fps": 6.02,
+    "H": 6,
+    "duration_min": 57.1,
+    "brightness": 113.5,
+    "block_rate": 0.03145,
+    "episodes": 259,
+    "episode_median_s": 0.33,
+    "pos_rate": 0.09476159503677391,
+    "frame": {
+     "agreement": 0.9946,
+     "precision": 0.8534599728629579,
+     "recall": 1.0
+    },
+    "horizon": {
+     "agreement": 0.9936959023365187,
+     "precision": 0.9376237623762376,
+     "recall": 1.0
+    },
+    "persistence": {
+     "auroc": 0.5933340068451917,
+     "ap": 0.22857450333050233,
+     "f1": 0.31318890155834284
+    }
+   },
+   "2": {
+    "frames": 20000,
+    "valid": 19987,
+    "fps": 6.02,
+    "H": 6,
+    "duration_min": 60.1,
+    "brightness": 102.8,
+    "block_rate": 0.0345,
+    "episodes": 292,
+    "episode_median_s": 0.33,
+    "pos_rate": 0.10501826187021564,
+    "frame": {
+     "agreement": 0.99765,
+     "precision": 1.0,
+     "recall": 0.9318840579710145
+    },
+    "horizon": {
+     "agreement": 0.9958473007454846,
+     "precision": 1.0,
+     "recall": 0.9604573606479276
+    },
+    "persistence": {
+     "auroc": 0.5991522818174767,
+     "ap": 0.2174497104185518,
+     "f1": 0.28102189781021897
+    }
+   },
+   "3": {
+    "frames": 4255,
+    "valid": 4242,
+    "fps": 6.02,
+    "H": 6,
+    "duration_min": 12.4,
+    "brightness": 112.8,
+    "block_rate": 0.024676850763807285,
+    "episodes": 45,
+    "episode_median_s": 0.33,
+    "pos_rate": 0.07755775577557755,
+    "frame": {
+     "agreement": 0.9978848413631022,
+     "precision": 1.0,
+     "recall": 0.9142857142857143
+    },
+    "horizon": {
+     "agreement": 0.9945780292314946,
+     "precision": 1.0,
+     "recall": 0.9300911854103343
+    },
+    "persistence": {
+     "auroc": 0.5546362875832022,
+     "ap": 0.202069779360851,
+     "f1": 0.2823529411764706
+    }
+   },
+   "4": {
+    "frames": 19999,
+    "valid": 19986,
+    "fps": 6.02,
+    "H": 6,
+    "duration_min": 59.1,
+    "brightness": 114.4,
+    "block_rate": 0.025351267563378167,
+    "episodes": 213,
+    "episode_median_s": 0.33,
+    "pos_rate": 0.07700390273191234,
+    "frame": {
+     "agreement": 0.9981499074953748,
+     "precision": 1.0,
+     "recall": 0.9270216962524654
+    },
+    "horizon": {
+     "agreement": 0.9970979685780046,
+     "precision": 1.0,
+     "recall": 0.9623131903833658
+    },
+    "persistence": {
+     "auroc": 0.5867119165092781,
+     "ap": 0.19833201747266327,
+     "f1": 0.282727725236436
+    }
+   }
+  }
+ },
+ {
+  "target": "scenario21",
+  "frames": 20000,
+  "valid": 19988,
+  "fps": [
+   5.0,
+   5.0
+  ],
+  "H": [
+   5
+  ],
+  "duration_min": 62.5,
+  "brightness": 108.2,
+  "block_rate": 0.039,
+  "episodes": 339,
+  "episode_median_s": 0.4,
+  "pos_rate": 0.10441264758855313,
+  "frame": {
+   "agreement": 0.995,
+   "precision": 1.0,
+   "recall": 0.8717948717948718
+  },
+  "horizon": {
+   "agreement": 0.9898939363618171,
+   "precision": 1.0,
+   "recall": 0.9032103497843795
+  },
+  "persistence": {
+   "auroc": 0.6056483742626719,
+   "ap": 0.2328353041047625,
+   "f1": 0.29851825081315503
+  },
+  "per_seq": {
+   "1": {
+    "frames": 20000,
+    "valid": 19988,
+    "fps": 5.0,
+    "H": 5,
+    "duration_min": 62.5,
+    "brightness": 108.2,
+    "block_rate": 0.039,
+    "episodes": 339,
+    "episode_median_s": 0.4,
+    "pos_rate": 0.10441264758855313,
+    "frame": {
+     "agreement": 0.995,
+     "precision": 1.0,
+     "recall": 0.8717948717948718
+    },
+    "horizon": {
+     "agreement": 0.9898939363618171,
+     "precision": 1.0,
+     "recall": 0.9032103497843795
+    },
+    "persistence": {
+     "auroc": 0.6056483742626719,
+     "ap": 0.2328353041047625,
+     "f1": 0.29851825081315503
+    }
+   }
+  }
+ }
+]

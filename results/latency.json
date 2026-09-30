@@ -1,0 +1,17 @@
+{
+ "target": "scenario21",
+ "seed": 0,
+ "batch": 16,
+ "ms_per_frame": {
+  "source": 0.063,
+  "norm": 0.185,
+  "tent": 0.229,
+  "eata": 0.287,
+  "sar": 0.539,
+  "cotta": 0.617,
+  "t3a": 0.19,
+  "thr": 0.189,
+  "selflabel": 2.089,
+  "selflabel-gt": 2.096
+ }
+}
