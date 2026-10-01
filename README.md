@@ -59,7 +59,7 @@ the per-frame scores that `stream_curve.py` reads to `results/scores/`, which is
 
 ## Citation
 
-See `CITATION.cff`. Cite DeepSense 6G (Alkhateeb et al., IEEE Communications Magazine, 2023) and the
+See `CITATION.cff`. Archived at Zenodo, concept DOI 10.5281/zenodo.23072763 (always the latest release). Cite DeepSense 6G (Alkhateeb et al., IEEE Communications Magazine, 2023) and the
 vision-aided blockage prediction study that introduced these scenarios (Charan and Alkhateeb, IEEE Globecom
 Workshops, 2022) for the data.
 
