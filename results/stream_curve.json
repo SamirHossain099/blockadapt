@@ -89,7 +89,9 @@
      0.7773,
      0.8838
     ]
-   }
+   },
+   "source_first_selflabel_ap": 0.7865,
+   "source_first_true_ap": 0.7865
   },
   "scenario18": {
    "frames": 119886,
@@ -385,7 +387,9 @@
      0.8086,
      0.7396
     ]
-   }
+   },
+   "source_first_selflabel_ap": 0.5743,
+   "source_first_true_ap": 0.5743
   },
   "scenario19": {
    "frames": 159869,
@@ -755,7 +759,9 @@
      0.6164,
      0.7255
     ]
-   }
+   },
+   "source_first_selflabel_ap": 0.4173,
+   "source_first_true_ap": 0.4208
   },
   "scenario20": {
    "frames": 64202,
@@ -950,7 +956,9 @@
      0.5425,
      0.7053
     ]
-   }
+   },
+   "source_first_selflabel_ap": 0.4194,
+   "source_first_true_ap": 0.3867
   },
   "scenario21": {
    "frames": 19988,
@@ -1061,7 +1069,9 @@
      0.6971,
      0.5796
     ]
-   }
+   },
+   "source_first_selflabel_ap": 0.2419,
+   "source_first_true_ap": 0.2435
   }
  }
 }

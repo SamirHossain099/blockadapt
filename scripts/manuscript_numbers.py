@@ -18,9 +18,9 @@ SESSIONS = TARGETS[1:]
 NAME = {"scenario17:day": "17, afternoon (source)", "scenario17:night": "17, night", "scenario18": "18", "scenario19": "19",
         "scenario20": "20", "scenario21": "21"}
 FREE = ["norm", "tent", "eata", "sar", "cotta", "t3a"]
+# threshold re-calibration keeps the source's ranking, so its AP equals the source row and is not tabulated
 ROWS = [("source", "Source, frozen"), ("norm", "Normalization statistics"), ("tent", "Tent"), ("eata", "EATA"), ("sar", "SAR"),
-        ("cotta", "CoTTA"), ("t3a", "T3A"), ("thr", "Threshold re-calibration, self-labels"),
-        ("selflabel", "Fine-tuning, self-labels"), ("selflabel-gt", "Fine-tuning, dataset labels")]
+        ("cotta", "CoTTA"), ("t3a", "T3A"), ("selflabel", "Fine-tuning, self-labels"), ("selflabel-gt", "Fine-tuning, dataset labels")]
 WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
 
 
@@ -108,6 +108,9 @@ def main():
     put("early_night_src", e["source"][0], "{:.2f}", "stream_curve")
     put("early_night_ft", e["selflabel"][0], "{:.2f}", "stream_curve")
     put("early_frames", curve["first"], "{:,d}", "stream_curve")
+    cross = next(i for i, (f_, s_) in enumerate(zip(e["selflabel"], e["source"])) if f_ >= s_)
+    put("night_cross_frames", cross * curve["first"], "{:,d}", "stream_curve")
+    put("night_cross_min", cross * curve["first"] / 12.05 / 60, "{:.0f}", "stream_curve")
     if "scenario19" in curve["targets"]:
         c = curve["targets"]["scenario19"]
         s, f = np.array(c["methods"]["source"]["mean"]), np.array(c["methods"]["selflabel"]["mean"])
@@ -117,9 +120,20 @@ def main():
         put("s19_src_max", s.max(), "{:.2f}", "stream_curve")
         put("s19_ft_min", f[1:].min(), "{:.2f}", "stream_curve")
         put("s19_ft_max", f[1:].max(), "{:.2f}", "stream_curve")
+    ct = curve["targets"]
+    put("selfest_night", ct["scenario17:night"]["source_first_selflabel_ap"], "{:.2f}", "stream_curve")
+    put("selfest_sess_min", min(ct[t]["source_first_selflabel_ap"] for t in SESSIONS), "{:.2f}", "stream_curve")
+    put("selfest_sess_max", max(ct[t]["source_first_selflabel_ap"] for t in SESSIONS), "{:.2f}", "stream_curve")
+    put("selfest_err_max", max(abs(ct[t]["source_first_selflabel_ap"] - ct[t]["source_first_true_ap"]) for t in TARGETS), "{:.2f}", "stream_curve")
     blocks = [(np.array(c["methods"]["selflabel"]["mean"]) > np.array(c["methods"]["source"]["mean"])) for t, c in curve["targets"].items() if t in SESSIONS]
     put("sess_blocks", sum(len(b) for b in blocks), "{:d}", "stream_curve")
     put("sess_blocks_above", sum(int(b.sum()) for b in blocks), "{:d}", "stream_curve")
+
+    s20 = json.loads((R / "s20_index.json").read_text())
+    put("s20_jump", s20["jump"], "{:,d}", "s20_index")
+    put("s20_missing", s20["seq4_named_missing"], "{:,d}", "s20_index")
+    put("s20_existing", s20["seq4_named_existing"], "{:,d}", "s20_index")
+    put("s20_agree", 100 * s20["seq4_by_row_agreement"], "{:.1f}", "s20_index")
 
     # cost and sensitivity, if measured
     lat = R / "latency.json"
@@ -137,11 +151,16 @@ def main():
         put("lr_src_ap", S["source_mean_ap"], "{:.2f}", "lr_sensitivity")
 
     # tables
-    t1 = ["| Domain | Frames | Frames/s | Brightness | Blocked (%) | Positive (%) | Rule agreement (%) |", "|---|---|---|---|---|---|---|"]
+    # four columns, so the IEEE build keeps the table inside one text column
+    t1 = ["| Domain | Frames | Positive (%) | Agreement (%) |", "|---|---|---|---|"]
     for t in ["scenario17:day"] + TARGETS:
         r = lab[t]
-        fps = f"{r['fps'][0]:.0f}" if round(r["fps"][0]) == round(r["fps"][1]) else f"{r['fps'][0]:.0f} to {r['fps'][1]:.0f}"
-        t1.append(f"| {NAME[t]} | {r['frames']:,d} | {fps} | {r['brightness']:.0f} | {100 * r['block_rate']:.1f} | {100 * r['pos_rate']:.1f} | {100 * r['frame']['agreement']:.2f} |")
+        t1.append(f"| {NAME[t]} | {r['frames']:,d} | {100 * r['pos_rate']:.1f} | {100 * r['frame']['agreement']:.2f} |")
+    put("fps_min", min(lab[t]["fps"][0] for t in lab), "{:.0f}", "label_agreement")
+    put("fps_max", max(lab[t]["fps"][1] for t in lab), "{:.0f}", "label_agreement")
+    put("bright_night", lab["scenario17:night"]["brightness"], "{:.0f}", "label_agreement")
+    put("bright_min", min(lab[t]["brightness"] for t in lab if t != "scenario17:night"), "{:.0f}", "label_agreement")
+    put("bright_max", max(lab[t]["brightness"] for t in lab if t != "scenario17:night"), "{:.0f}", "label_agreement")
     t2 = ["| Method | " + " | ".join(NAME[t] for t in TARGETS) + " | Mean |", "|---|" + "---|" * (len(TARGETS) + 1)]
     for m, label in ROWS:
         cells = [f"{tg[('sequential', t, m)]['ap']:.2f}" for t in TARGETS]

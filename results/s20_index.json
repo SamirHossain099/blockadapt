@@ -1,0 +1,10 @@
+{
+ "rows": 64254,
+ "jump_at_row": 44256,
+ "jump": 6584,
+ "seq4_rows": 19999,
+ "seq4_named_missing": 6583,
+ "seq4_named_existing": 13416,
+ "label_files": 64254,
+ "seq4_by_row_agreement": 0.9981499074953748
+}

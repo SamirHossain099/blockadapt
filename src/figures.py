@@ -41,7 +41,7 @@ def save(fig, name):
 def fig_delta_ap():
     """Change in AP against the frozen source model, per method and target: (a) sequential stream, (b) shuffled."""
     rows = [r for r in json.loads((RES / "headline.json").read_text()) if r["kind"] == "target"]
-    fig, axes = plt.subplots(1, 2, figsize=(3.5, 2.3), sharey=True, sharex=True)
+    fig, axes = plt.subplots(1, 2, figsize=(3.5, 1.95), sharey=True, sharex=True)
     for ax, order, title, methods in ((axes[0], "sequential", "(a) sequential stream", list(METHOD_LABEL)),
                                       (axes[1], "iid", "(b) shuffled batches", list(METHOD_LABEL)[:-1])):
         for k, m in enumerate(methods):
@@ -58,9 +58,9 @@ def fig_delta_ap():
         ax.grid(axis="y", visible=False)
     axes[0].invert_yaxis()
     h, lab = axes[0].get_legend_handles_labels()
-    fig.supxlabel("change in AP against the frozen source model", fontsize=8, x=0.56, y=-0.04)
+    fig.supxlabel("change in AP against the frozen source model", fontsize=8, x=0.56, y=-0.06)
     fig.legend(h, lab, loc="lower center", ncol=5, fontsize=7, handletextpad=0.1, columnspacing=0.8, bbox_to_anchor=(0.56, -0.2),
-               title="target", title_fontsize=7)
+               title=None)
     fig.subplots_adjust(wspace=0.08)
     save(fig, "fig_delta_ap")
 
@@ -70,7 +70,7 @@ def fig_stream(target="scenario19"):
     d = json.loads((RES / "stream_curve.json").read_text())
     t = d["targets"][target]
     x = np.array(t["x"]) / 1000
-    fig, ax = plt.subplots(figsize=(3.5, 1.9))
+    fig, ax = plt.subplots(figsize=(3.5, 1.55))
     for m, (c, ls, lab) in LINE.items():
         mu, sd = np.array(t["methods"][m]["mean"]), np.array(t["methods"][m]["std"])
         ax.plot(x, mu, color=c, linestyle=ls, label=lab)
@@ -80,7 +80,7 @@ def fig_stream(target="scenario19"):
     ax.set_xlabel("frames into the stream (thousands)")
     ax.set_ylabel(f"AP per {d['block'] // 1000}k frames")
     ax.set_ylim(0, 1)
-    ax.legend(fontsize=6.5, ncol=2, loc="upper center", bbox_to_anchor=(0.5, 1.3), columnspacing=1.0)
+    ax.legend(fontsize=6.5, ncol=2, loc="upper center", bbox_to_anchor=(0.5, 1.36), columnspacing=1.0)
     save(fig, "fig_stream")
 
 

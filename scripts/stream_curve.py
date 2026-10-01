@@ -43,6 +43,12 @@ def main():
             e2 = list(range(0, min(len(idx), 10 * FIRST) - FIRST + 1, FIRST))
             ap2 = np.array([[avg_precision(zz[f"sequential/{m}"][e:e + FIRST], y[e:e + FIRST]) for e in e2] for zz in z])
             t["early"][m] = np.round(np.nanmean(ap2, 0), 4).tolist()
+        # how well the self-labels alone measure the source model early in the stream (a gate for adaptation)
+        n = FIRST
+        est = [avg_precision(zz["sequential/source"][:n], d["y_pwr"][idx[:n]]) for zz in z]
+        tru = [avg_precision(zz["sequential/source"][:n], y[:n]) for zz in z]
+        t["source_first_selflabel_ap"] = round(float(np.mean(est)), 4)
+        t["source_first_true_ap"] = round(float(np.mean(tru)), 4)
         out["targets"][tgt] = t
         s, f = np.array(t["methods"]["source"]["mean"]), np.array(t["methods"]["selflabel"]["mean"])
         print(f"{tgt:17s} blocks {len(edges):3d}  source {s.mean():.3f}  selflabel {f.mean():.3f}  first block: {s[0]:.3f} vs {f[0]:.3f}  "
